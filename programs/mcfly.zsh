@@ -8,3 +8,10 @@ zinit ice id-as'mcfly' \
 zinit snippet 'https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh'
 
 eval "$(~/.local/bin/mcfly init zsh)"
+
+clrhist() {
+	rm -rf "$HOME/.zsh_history"
+	touch "$HOME/.zsh_history"
+	rm -rf "$HOME/.local/share/mcfly"
+	rm -rf "$HOME/Library/Application Support/McFly"
+}
